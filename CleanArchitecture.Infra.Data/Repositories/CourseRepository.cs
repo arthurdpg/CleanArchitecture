@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Data.Context;
+﻿using CleanArchitecture.Infra.Data.Context;
 using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.Domain.Models;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitecture.Data.Repositories
+namespace CleanArchitecture.Infra.Data.Repositories
 {
     public class CourseRepository : ICourseRepository
     {
