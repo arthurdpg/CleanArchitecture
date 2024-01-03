@@ -1,4 +1,5 @@
 using CleanArchitecture.Infra.Data.Context;
+using CleanArchitecture.Infra.IoC;
 using CleanArchitecture.Mvc.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,8 @@ builder.Services.AddDbContext<UniversityDbContext>(options =>
 });
 
 builder.Services.AddControllersWithViews();
+
+DependencyContainer.RegisterServices(builder.Services);
 
 var app = builder.Build();
 
