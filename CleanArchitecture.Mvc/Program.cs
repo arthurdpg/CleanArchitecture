@@ -24,6 +24,8 @@ builder.Services.AddDbContext<UniversityDbContext>(options =>
 
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
+
 DependencyContainer.RegisterServices(builder.Services);
 
 var app = builder.Build();
