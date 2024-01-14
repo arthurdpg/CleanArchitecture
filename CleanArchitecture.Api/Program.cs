@@ -1,3 +1,4 @@
+using CleanArchitecture.Api.Configurations;
 using CleanArchitecture.Infra.Data.Context;
 using CleanArchitecture.Infra.IoC;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +21,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
 
+builder.Services.RegisterAutoMapper();
 DependencyContainer.RegisterServices(builder.Services);
 
 

@@ -1,5 +1,6 @@
 using CleanArchitecture.Infra.Data.Context;
 using CleanArchitecture.Infra.IoC;
+using CleanArchitecture.Mvc.Configurations;
 using CleanArchitecture.Mvc.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +27,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
 
+builder.Services.RegisterAutoMapper();
 DependencyContainer.RegisterServices(builder.Services);
 
 var app = builder.Build();
